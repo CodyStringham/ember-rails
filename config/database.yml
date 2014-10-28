@@ -1,0 +1,20 @@
+login: &login
+  username: cody
+  password:
+  adapter:  postgresql
+  encoding: unicode
+  pool:
+
+
+development:
+  database: ember-crm_development
+  <<: *login
+
+test:
+  database: ember-crm_test
+  <<: *login
+
+production:
+  database: ember-crm_production
+  <<: *login
+
